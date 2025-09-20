@@ -1,0 +1,25 @@
+:root{
+  --white: ;
+  --background-image: url('../textures/gui/bg_overlay.png');
+  --black: #000000ff;
+  --alpha-black: #00000044;
+  --color-on: #ffffffff;
+  --header-bg: url('../textures/gui/floor.png'), url('../textures/gui/bg_inner.png'), url('../textures/gui/list_bg.png');
+  --company-logo: url('../textures/gui/company.png');
+  --gacha-bg: url('../textures/gui/card.png');
+  --blue-button: url('../textures/gui/opx1.png');
+  --yellow-button: url('../textures/gui/opx10.png');
+  --card-def: url('../textures/gatcha/1d.png');
+  --card-c: url('../textures/gatcha/2c.png');
+  --card-b: url('../textures/gatcha/3b.png');
+  --card-a: url('../textures/gatcha/4a.png');
+  --card-s: url('../textures/gatcha/5s.png');
+  --card-sp: url('../textures/gatcha/6sp.png');
+  --card-ss: url('../textures/gatcha/7ss.png');
+  --game-logo: url('../textures/gui/logo.png');
+  --mecha-icon: url('../textures/gui/');
+  --tab-vert: url('../textures/gui/tab_vertical.png');
+  --tabs-continer: url('../textures/gui/tabs_continer.png');
+  --tab-hor-off: url('../textures/gui/tab_off.png');
+  --tab-hor-on: url('../textures/gui/tab_horizontal.png');
+}

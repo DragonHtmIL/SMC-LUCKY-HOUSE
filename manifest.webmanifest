@@ -1,0 +1,107 @@
+{
+  "name": "SMC Lucky House",
+  "short_name": "SMC Lucky House",
+  "description": "Get a mechas pilots and thers skins.",
+  "scope": "/SMC-LUCKY-HOUSE/",
+  "start_url": "/SMC-LUCKY-HOUSE/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "225x225"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "228x228"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "300x300"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/SMC-LUCKY-HOUSE/index_data/textures/system/icon.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

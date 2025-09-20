@@ -1,6 +1,6 @@
 var GHPATH = '/SMC-LUCKY-HOUSE';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "1.0.0-20092025-beta";
+let VERSIONNAME = "1.0.1-20092025-beta";
 var VERSION = VERSIONNAME;
 
 var URLS = [
@@ -139,6 +139,7 @@ var URLS = [
   `${GHPATH}/Index_data/textures/gui/tab_off.png`,
   `${GHPATH}/Index_data/textures/gui/tab_vertical.png`,
   `${GHPATH}/Index_data/textures/gui/tabs_continer.png`,
+  `${GHPATH}/Index_data/textures/gui/cards_continer.png`,
 
   `${GHPATH}/Index_data/textures/videos`,
   `${GHPATH}/Index_data/textures/videos/Gacha vid press.mp4`,

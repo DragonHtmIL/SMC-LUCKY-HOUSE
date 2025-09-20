@@ -6,7 +6,7 @@
   --color-on: #ffffffff;
   --header-bg: url('../textures/gui/floor.png'), url('../textures/gui/bg_inner.png'), url('../textures/gui/list_bg.png');
   --company-logo: url('../textures/gui/company.png');
-  --gacha-bg: url('../textures/gui/card.png');
+  --gacha-bg: url('../textures/gui/cards_continer.png');
   --blue-button: url('../textures/gui/opx1.png');
   --yellow-button: url('../textures/gui/opx10.png');
   --card-def: url('../textures/gatcha/1d.png');

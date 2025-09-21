@@ -7,7 +7,7 @@ const pilots = [
   { name: "Iori", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Iori.png" },
   { name: "Ivan", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Ivan.png" },
   { name: "Jaka", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Jaka.png" },
-  { name: "Jiu Chomg", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Jiu Chomg.png" },
+  { name: "Jiu Chong", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Jiu Chong.png" },
   { name: "Joanna", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Joanna.png" },
   { name: "Kije", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Kije.png" },
   { name: "Kikina", rarity: "Default", image: "Index_data/textures/cards/pilots/default/Kikina.png" },
@@ -40,6 +40,7 @@ const pilots = [
   // ... more pilots
 ];
 function summonPilotOne() {
+  const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
   const videoBlocker = document.getElementById("videoBlocker");
@@ -54,7 +55,7 @@ function summonPilotOne() {
   setTimeout( function() {
     gachaVid.src = "Index_data/videos/Gacha vid start.mp4";
     gachaAud.src = "Index_data/audio/Gacha aud start.mp3";
-    gachaVid.style.display = "block";
+    vidFrame.style.display = "block";
     videoBlocker.style.display = "block";
     gachaVid.onloadeddata = () => {
       gachaVid.play();
@@ -76,8 +77,6 @@ function summonPilotOne() {
     gachaAud.onloadeddata = () => {
       gachaAud.play();
     };
-    document.getElementById("oponebtnDefPilotOne").classList.remove("btnclicked");
-    document.getElementById("oponebtnDefPilotOne").disabled = false;
   },7000);
   // Simplified rarity system (adjust probabilities as needed)
   if (randomNumber < 1.00) {
@@ -100,6 +99,7 @@ function displaypilot(pilot) {
   const displayArea = document.getElementById("prices-display");
   const pilotDiv = document.createElement("div");
   const imgBlocker = document.createElement("div");
+  const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
   const videoBlocker = document.getElementById("videoBlocker");
@@ -126,17 +126,17 @@ function displaypilot(pilot) {
     videoBlocker.style.display = "block";
     setTimeout( function() {
       gachaVid.removeAttribute("loop");
-      gachaVid.style.display = "none";
       gachaVid.pause();
       gachaAud.removeAttribute("loop");
-      gachaAud.style.display = "none";
       gachaAud.pause();
-      videoBlocker.style.display = "none";
+      vidFrame.style.display = "none";
       document.getElementById("gachaPrises").style.display = "block";
     },1650);
   })
   document.getElementById("gachaPrises").addEventListener('click', function() {
     displayArea.removeChild(pilotDiv);
+    document.getElementById("oponebtnDefPilotOne").classList.remove("btnclicked");
+    document.getElementById("oponebtnDefPilotOne").disabled = false;
     document.getElementById("gachaPrises").style.display = "none";
   });
   displayArea.appendChild(pilotDiv);

@@ -39,6 +39,7 @@ const mechas = [
   // ... more mechas
 ];
 function summonMechaOne() {
+  const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
   const videoBlocker = document.getElementById("videoBlocker");
@@ -53,7 +54,7 @@ function summonMechaOne() {
   setTimeout( function() {
     gachaVid.src = "Index_data/videos/Gacha vid start.mp4";
     gachaAud.src = "Index_data/audio/Gacha aud start.mp3";
-    gachaVid.style.display = "block";
+    vidFrame.style.display = "block";
     videoBlocker.style.display = "block";
     gachaVid.onloadeddata = () => {
       gachaVid.play();
@@ -75,8 +76,6 @@ function summonMechaOne() {
     gachaAud.onloadeddata = () => {
       gachaAud.play();
     };
-    document.getElementById("oponebtnDefMechaOne").classList.remove("btnclicked");
-    document.getElementById("oponebtnDefMechaOne").disabled = false;
   },7000);
   // Simplified rarity system (adjust probabilities as needed)
   if (randomNumber < 1.00) {
@@ -99,6 +98,7 @@ function displaymecha(mecha) {
   const displayArea = document.getElementById("prices-display");
   const mechaDiv = document.createElement("div");
   const imgBlocker = document.createElement("div");
+  const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
   const videoBlocker = document.getElementById("videoBlocker");
@@ -125,17 +125,17 @@ function displaymecha(mecha) {
     videoBlocker.style.display = "block";
     setTimeout( function() {
       gachaVid.removeAttribute("loop");
-      gachaVid.style.display = "none";
       gachaVid.pause();
       gachaAud.removeAttribute("loop");
-      gachaAud.style.display = "none";
       gachaAud.pause();
-      videoBlocker.style.display = "none";
+      vidFrame.style.display = "none";
       document.getElementById("gachaPrises").style.display = "block";
     },1650);
   })
   document.getElementById("gachaPrises").addEventListener('click', function() {
     displayArea.removeChild(mechaDiv);
+    document.getElementById("oponebtnDefMechaOne").classList.remove("btnclicked");
+    document.getElementById("oponebtnDefMechaOne").disabled = false;
     document.getElementById("gachaPrises").style.display = "none";
   });
   displayArea.appendChild(mechaDiv);

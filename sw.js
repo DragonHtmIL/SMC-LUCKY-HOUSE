@@ -1,6 +1,6 @@
 var GHPATH = '/SMC-LUCKY-HOUSE';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "1.0.2-20092025-beta";
+let VERSIONNAME = "1.0.3-21092025-beta";
 var VERSION = VERSIONNAME;
 
 var URLS = [

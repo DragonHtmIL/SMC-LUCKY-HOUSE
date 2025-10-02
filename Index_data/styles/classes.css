@@ -19,6 +19,14 @@ img[alt="Akashic"] {
 .image-preview.akashic {
   background-image: var(--akashic-img-preview);
 }
+.gacha-continer.akashic.locked::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var() center/cover no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+}
 img[alt="Alborada"] {
   width: auto;
   height: 100%;
@@ -121,22 +129,22 @@ img[alt="Caramel"] {
 .image-preview.caramel {
   background-image: var(--caramel-img-preview);
 }
-img[alt="Death Knel"] {
+img[alt="Death Knell"] {
   width: auto;
   height: 100%;
   position: relative;
   margin-left: -25px;
 }
-.item-image.death-knel {
-  background-image: var(--death-knel-img);
+.item-image.death-knell {
+  background-image: var(--death-knell-img);
   background-position: 0 -35px;
 }
-.name.death-knel::after {
-  content: 'Death Knel';
+.name.death-knell::after {
+  content: 'Death Knell';
   font-size: 16px;
 }
-.image-preview.death-knel {
-  background-image: var(--death-knel-img-preview);
+.image-preview.death-knell {
+  background-image: var(--death-knell-img-preview);
 }
 img[alt="Doomlight"] {
   width: auto;
@@ -168,6 +176,9 @@ img[alt="Dreadwolf"] {
 .name.dreadwolf::after {
   content: 'Dreadwolf';
   font-size: 16px;
+}
+.image-preview.dreadwolf {
+  background-image: var(--dreadwolf-img-preview);
 }
 img[alt="Firefox"] {
   width: auto;

@@ -1,20 +1,18 @@
-function summonPilotOne() {
+function summonPilotTen() {
   let gold = parseInt(localStorage.getItem("goldStorage")) || 0;
-  summonType = "p1";
-  if (gold < 160) {
+  summonType = "p10";
+  if (gold < 1600) {
     return;
   }
-  gold -= 160;
+  gold -= 1600;
   localStorage.setItem("goldStorage", gold);
   const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
   const videoBlocker = document.getElementById("videoBlocker");
-  const randomNumber = Math.random() * pilots.length;
-  let pilot;
   // for pressed button
-  document.getElementById("oponebtnDefPilotOne").disabled = true;
-  document.getElementById("oponebtnDefPilotOne").classList.add("btnclicked");
+  document.getElementById("oponebtnDefPilotTen").disabled = true;
+  document.getElementById("oponebtnDefPilotTen").classList.add("btnclicked");
   document.getElementById("btnPress").play();
   document.getElementById("btnPress").removeAttribute("loop");
   // start gacha animation
@@ -44,22 +42,23 @@ function summonPilotOne() {
       gachaAud.play();
     };
   },7000);
-  // Simplified rarity system (adjust probabilities as needed)
-  if (randomNumber < 1.00) {
-    pilot = pilots.find(c => c.rarity === Math.floor(Math.random() * pilots.length));
-  } else {
-    pilot = pilots.find(c => c.rarity === Math.floor(Math.random() * pilots.length));
+  // generate 10 pilots
+  const results = [];
+  for (let i = 0; i < 10; i++) {
+    const randomNumber = Math.random() * pilots.length;
+    let pilot;
+    if (randomNumber < 1.0) {
+      pilot = pilots[Math.floor(Math.random() * pilots.length)];
+    } else {
+      pilot = pilots[Math.floor(Math.random() * pilots.length)];
+    }
+    if (!pilot) {
+      const availableCommons = pilots.filter(c => c.rarity === "Default");
+      pilot = availableCommons[Math.floor(Math.random() * availableCommons.length)];
+    }
+    results.push(pilot);
   }
-  if (!pilot) {
-     // Handle cases where a pilot of a certain rarity is not found.
-     const availableCommons = pilots.filter(c => c.rarity === "Default");
-     pilot = availableCommons[Math.floor(Math.random() * availableCommons.length)];
-     if(!pilot) {
-        console.error("No pilots found for summoning!");
-        return;
-     }
-  }
-  displaypilot(pilot);
+  results.forEach(pilot => displaypilot(pilot));
 }
 function displaypilot(pilot) {
   const displayArea = document.getElementById("prices-display");

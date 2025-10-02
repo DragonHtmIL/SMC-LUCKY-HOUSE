@@ -1,44 +1,11 @@
-const mechas = [
-  { name: "Akashic", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Akashic.png" }, // Replace with actual image paths
-  { name: "Alborada", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Alborada.png" },
-  { name: "Andromeda", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Andromeda.png" },
-  { name: "Arthur", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Arthur.png" },
-  { name: "Aurora", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Aurora.png" },
-  { name: "Boltus", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Boltus.png" },
-  { name: "Caramel", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Caramel.png" },
-  { name: "Death Knel", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Death Knel.png" },
-  { name: "Doomlight", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Doomlight.png" },
-  { name: "Dreadwolf", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Dreadwolf.png" },
-  { name: "Firefox", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Firefox.png" },
-  { name: "Firestar", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Firestar.png" },
-  { name: "Flamenco", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Flamenco.png" },
-  { name: "Gabriel", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Gabriel.png" },
-  { name: "Gaia", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Gaia.png" },
-  { name: "Guerilla Hunter", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Guerilla Hunter.png" },
-  { name: "Hotsteel", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Hotsteel.png" },
-  { name: "Hurricane", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Hurricane.png" },
-  { name: "JOJO", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Jojo.png" },
-  { name: "Lancelot", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Lancelot.png" },
-  { name: "Michael", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Michael.png" },
-  { name: "Moon Rabbit", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Moon Rabbit.png" },
-  { name: "Nebula", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Nebula.png" },
-  { name: "Neutron Star", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Neutron Star.png" },
-  { name: "Northern Knight", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Northern Knight.png" },
-  { name: "Pulsar", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Pulsar.png" },
-  { name: "Ranger", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Ranger.png" },
-  { name: "Raven", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Raven.png" },
-  { name: "Shiranui", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Shiranui.png" },
-  { name: "Skyfall", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Skyfall.png" },
-  { name: "Skyfire", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Skyfire.png" },
-  { name: "Skylark", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Skylark.png" },
-  { name: "Snow Mirage", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Snow Mirage.png" },
-  { name: "Tempest", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Tempest.png" },
-  { name: "Trio of Enders", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Trio of Enders.png" },
-  { name: "Twilight", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Twilight.png" },
-  { name: "Ventorus", rarity: "Default", image: "Index_data/textures/cards/mechas/default/Ventorus.png" }
-  // ... more mechas
-];
 function summonMechaOne() {
+  let gold = parseInt(localStorage.getItem("goldStorage")) || 0;
+  summonType = "m1";
+  if (gold < 160) {
+    return;
+  }
+  gold -= 160;
+  localStorage.setItem("goldStorage", gold);
   const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
@@ -131,12 +98,35 @@ function displaymecha(mecha) {
       vidFrame.style.display = "none";
       document.getElementById("gachaPrises").style.display = "block";
     },1650);
-  })
+  });
   document.getElementById("gachaPrises").addEventListener('click', function() {
-    displayArea.removeChild(mechaDiv);
-    document.getElementById("oponebtnDefMechaOne").classList.remove("btnclicked");
-    document.getElementById("oponebtnDefMechaOne").disabled = false;
-    document.getElementById("gachaPrises").style.display = "none";
+    if(summonType === "m1") {
+      displayArea.removeChild(mechaDiv);
+      document.getElementById("oponebtnDefMechaOne").classList.remove("btnclicked");
+      document.getElementById("oponebtnDefMechaOne").disabled = false;
+      document.getElementById("gachaPrises").style.display = "none";
+    }else
+    if(summonType === "p1") {
+      displayArea.removeChild(pilotDiv);
+      document.getElementById("oponebtnDefPilotOne").classList.remove("btnclicked");
+      document.getElementById("oponebtnDefPilotOne").disabled = false;
+      document.getElementById("gachaPrises").style.display = "none";
+    }else
+    if(summonType === "m10") {
+      const cards = displayArea.querySelectorAll(".card-continer");
+      cards.forEach(card => card.remove());
+      document.getElementById("oponebtnDefMechaTen").classList.remove("btnclicked");
+      document.getElementById("oponebtnDefMechaTen").disabled = false;
+      document.getElementById("gachaPrises").style.display = "none";
+    }else
+    if(summonType === "p10") {
+      const cards = displayArea.querySelectorAll(".card-continer");
+      cards.forEach(card => card.remove());
+      document.getElementById("oponebtnDefPilotTen").classList.remove("btnclicked");
+      document.getElementById("oponebtnDefPilotTen").disabled = false;
+      document.getElementById("gachaPrises").style.display = "none";
+    }
+    summonType = "none";
   });
   displayArea.appendChild(mechaDiv);
   mechaDiv.appendChild(imgBlocker);

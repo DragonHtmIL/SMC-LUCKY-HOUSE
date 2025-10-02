@@ -41,11 +41,11 @@ function checkObtineds() {
   }else{
     console.log("Caramel is not obtined");
   };
-  if(localStorage.getItem("Death Knel") === "geted") {
-    document.getElementById("imgLockDeathKnel").classList.remove("locked");
-    document.getElementById("classesDeathKnel").classList.remove("locked");
+  if(localStorage.getItem("Death Knell") === "geted") {
+    document.getElementById("imgLockDeathKnell").classList.remove("locked");
+    document.getElementById("classesDeathKnell").classList.remove("locked");
   }else{
-    console.log("Death Knel is not obtined");
+    console.log("Death Knell is not obtined");
   };
   if(localStorage.getItem("Doomlight") === "geted") {
     document.getElementById("imgLockDoomlight").classList.remove("locked");

@@ -1,0 +1,1 @@
+let summonType = "none";

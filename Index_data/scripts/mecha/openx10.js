@@ -1,20 +1,18 @@
-function summonPilotOne() {
+function summonMechaTen() {
   let gold = parseInt(localStorage.getItem("goldStorage")) || 0;
-  summonType = "p1";
-  if (gold < 160) {
+  summonType = "m10";
+  if (gold < 1600) {
     return;
   }
-  gold -= 160;
+  gold -= 1600;
   localStorage.setItem("goldStorage", gold);
   const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
   const videoBlocker = document.getElementById("videoBlocker");
-  const randomNumber = Math.random() * pilots.length;
-  let pilot;
   // for pressed button
-  document.getElementById("oponebtnDefPilotOne").disabled = true;
-  document.getElementById("oponebtnDefPilotOne").classList.add("btnclicked");
+  document.getElementById("oponebtnDefMechaTen").disabled = true;
+  document.getElementById("oponebtnDefMechaTen").classList.add("btnclicked");
   document.getElementById("btnPress").play();
   document.getElementById("btnPress").removeAttribute("loop");
   // start gacha animation
@@ -44,40 +42,41 @@ function summonPilotOne() {
       gachaAud.play();
     };
   },7000);
-  // Simplified rarity system (adjust probabilities as needed)
-  if (randomNumber < 1.00) {
-    pilot = pilots.find(c => c.rarity === Math.floor(Math.random() * pilots.length));
-  } else {
-    pilot = pilots.find(c => c.rarity === Math.floor(Math.random() * pilots.length));
+  // generate 10 mechas
+  const results = [];
+  for (let i = 0; i < 10; i++) {
+    const randomNumber = Math.random() * mechas.length;
+    let mecha;
+    if (randomNumber < 1.0) {
+      mecha = mechas[Math.floor(Math.random() * mechas.length)];
+    } else {
+      mecha = mechas[Math.floor(Math.random() * mechas.length)];
+    }
+    if (!mecha) {
+      const availableCommons = mechas.filter(c => c.rarity === "Default");
+      mecha = availableCommons[Math.floor(Math.random() * availableCommons.length)];
+    }
+    results.push(mecha);
   }
-  if (!pilot) {
-     // Handle cases where a pilot of a certain rarity is not found.
-     const availableCommons = pilots.filter(c => c.rarity === "Default");
-     pilot = availableCommons[Math.floor(Math.random() * availableCommons.length)];
-     if(!pilot) {
-        console.error("No pilots found for summoning!");
-        return;
-     }
-  }
-  displaypilot(pilot);
+  results.forEach(mecha => displaymecha(mecha));
 }
-function displaypilot(pilot) {
+function displaymecha(mecha) {
   const displayArea = document.getElementById("prices-display");
-  const pilotDiv = document.createElement("div");
+  const mechaDiv = document.createElement("div");
   const imgBlocker = document.createElement("div");
   const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");
   const gachaAud = document.getElementById("gachaAudionation");
   const videoBlocker = document.getElementById("videoBlocker");
-  pilotDiv.classList.add("card-continer");
-  pilotDiv.classList.add(pilot.rarity);
-  pilotDiv.innerHTML = `
-    <img src="${pilot.image}" alt="${pilot.name}">
+  mechaDiv.classList.add("card-continer");
+  mechaDiv.classList.add(mecha.rarity);
+  mechaDiv.innerHTML = `
+    <img src="${mecha.image}" alt="${mecha.name}">
   `;
   imgBlocker.classList.add("img-blocker");
-  localStorage.setItem(pilot.name, "geted");
+  localStorage.setItem(mecha.name, "geted");
   gachaVid.addEventListener('click', function() {
-    if(pilotDiv.classList.contains("Default")) {
+    if(mechaDiv.classList.contains("Default")) {
       gachaVid.src = "Index_data/videos/Gacha vid pressed.mp4";
       gachaAud.src = "Index_data/audio/Gacha aud pressed.mp3";
     }else{
@@ -128,6 +127,6 @@ function displaypilot(pilot) {
     }
     summonType = "none";
   });
-  displayArea.appendChild(pilotDiv);
-  pilotDiv.appendChild(imgBlocker);
+  displayArea.appendChild(mechaDiv);
+  mechaDiv.appendChild(imgBlocker);
 }

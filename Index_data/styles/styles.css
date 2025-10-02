@@ -197,10 +197,11 @@ video {
   width: 100%;
   margin-top: 0%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px 0px;
+  align-content: center;
 }
 #continueBtn {
   position: absolute;
@@ -225,6 +226,7 @@ p {
   display: flex;
   align-items: center;
   background-size: 100% 100%;
+  margin: 6px;
 }
 .card-continer.Default {
   background-image: var(--card-def);

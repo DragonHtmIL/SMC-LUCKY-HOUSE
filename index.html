@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="Index_data/styles/root.css">
     <link rel="stylesheet" href="Index_data/styles/styles.css">
     <link rel="stylesheet" href="Index_data/styles/classes.css">
+    <link rel="stylesheet" href="Index_data/styles/animations.css">
   </head>
   <body>
     <div class="header">
@@ -562,12 +563,18 @@
       <button class="gachatab pilottab" onclick="openGacha(event, 'pilotcontent')" id="pilotDefaultEvent">Pilot</button>
     </div>
     <div id="mechacontent" class="gacha-continer">
+      <div class="costs-continer">
+        <div class="cost-have-gold">0</div>
+      </div>
       <div class="gacha-btn-container">
         <button class="opone" id="oponebtnDefMechaOne" onclick="summonMechaOne();">Open x1</button>
         <button class="opten" id="oponebtnDefMechaTen" onclick="summonMechaTen();">Open x10</button>
       </div>
     </div>
     <div id="pilotcontent" class="gacha-continer">
+      <div class="costs-continer">
+        <div class="cost-have-gold">0</div>
+      </div>
       <div class="gacha-btn-container">
         <button class="opone" id="oponebtnDefPilotOne" onclick="summonPilotOne();">Open x1</button>
         <button class="opten" id="oponebtnDefPilotTen" onclick="summonPilotTen();">Open x10</button>
@@ -597,12 +604,7 @@
       </div>
     </div>
     <footer class="footer">
-      <div class="company-logo"></div>
-      <div class="context">
-        <div>Privacy Policy, Terms and Conditions<br>
-        ©1997-2025 NetEase, Inc.All Rights Reserved</div>
-        <div>Codded by: ArthurVesta</div>
-      </div>
+      <button class="play-game" onclick="openGame();">PLAY</button>
     </footer>
     <audio id="btnPress" src="Index_data/audio/press_btn.wav"></audio>
     <script src="Index_data/scripts/lets.js"></script>
@@ -619,7 +621,9 @@
     <script src="Index_data/scripts/pilot/show_info.js"></script>
     <script src="Index_data/scripts/skip_animation.js"></script>
     <script src="Index_data/scripts/clickable_name.js"></script>
-    <script src="Index_data/scripts/close_prices.js"></script>
+    <script src="Index_data/scripts/costs_display.js"></script>
+    <script src="Index_data/scripts/animations.js"></script>
+    <script src="Index_data/scripts/open_game.js"></script>
     <script src="Index_data/scripts/window_load.js"></script>
     <script>
       if(navigator.serviceWorker) {

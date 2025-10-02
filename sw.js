@@ -1,11 +1,11 @@
 var GHPATH = '/SMC-LUCKY-HOUSE';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "1.0.5-02102025-beta";
+let VERSIONNAME = "1.0.7-02102025-beta";
 var VERSION = VERSIONNAME;
 
 var URLS = [
   `${GHPATH}/`,
-  `${GHPATH}/index_data`,
+  `${GHPATH}/Index_data`,
   `${GHPATH}/index.html`,
   `${GHPATH}/manifest.webmanifest`,
 
@@ -25,6 +25,7 @@ var URLS = [
   `${GHPATH}/Index_data/scripts/tabs.js`,
   `${GHPATH}/Index_data/scripts/tabs_gallery.js`,
   `${GHPATH}/Index_data/scripts/window_load.js`,
+  `${GHPATH}/Index_data/scripts/costs_display.js`,
 
   `${GHPATH}/Index_data/scripts/mecha`,
   `${GHPATH}/Index_data/scripts/mecha/openx1.js`,
@@ -240,7 +241,25 @@ var URLS = [
   `${GHPATH}/Index_data/textures/gui/cards_continer.png`,
 
   `${GHPATH}/Index_data/textures/system`,
-  `${GHPATH}/Index_data/textures/system/icon.png`,
+  `${GHPATH}/Index_data/textures/system/icon_0.png`,
+  `${GHPATH}/Index_data/textures/system/icon_16.png`,
+  `${GHPATH}/Index_data/textures/system/icon_32.png`,
+  `${GHPATH}/Index_data/textures/system/icon_48.png`,
+  `${GHPATH}/Index_data/textures/system/icon_76.png`,
+  `${GHPATH}/Index_data/textures/system/icon_96.png`,
+  `${GHPATH}/Index_data/textures/system/icon_120.png`,
+  `${GHPATH}/Index_data/textures/system/icon_128.png`,
+  `${GHPATH}/Index_data/textures/system/icon_144.png`,
+  `${GHPATH}/Index_data/textures/system/icon_152.png`,
+  `${GHPATH}/Index_data/textures/system/icon_167.png`,
+  `${GHPATH}/Index_data/textures/system/icon_180.png`,
+  `${GHPATH}/Index_data/textures/system/icon_192.png`,
+  `${GHPATH}/Index_data/textures/system/icon_196.png`,
+  `${GHPATH}/Index_data/textures/system/icon_228.png`,
+  `${GHPATH}/Index_data/textures/system/icon_256.png`,
+  `${GHPATH}/Index_data/textures/system/icon_300.png`,
+  `${GHPATH}/Index_data/textures/system/icon_384.png`,
+  `${GHPATH}/Index_data/textures/system/icon_512.png`,
 
   `${GHPATH}/Index_data/textures/videos`,
   `${GHPATH}/Index_data/textures/videos/Gacha vid press.mp4`,

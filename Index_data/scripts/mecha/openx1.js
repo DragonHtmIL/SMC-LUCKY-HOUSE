@@ -1,10 +1,11 @@
 function summonMechaOne() {
   let gold = parseInt(localStorage.getItem("goldStorage")) || 0;
   summonType = "m1";
-  if (gold < 160) {
+  if (gold < 10) {
     return;
   }
-  gold -= 160;
+  gold -= 10;
+  costGoldShows();
   localStorage.setItem("goldStorage", gold);
   const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");

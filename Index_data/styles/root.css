@@ -28,6 +28,7 @@
   --close-fwin: url('../textures/gui/close0.png');
   --line: url('../textures/gui/line.png');
   --skip-vid: url('../textures/gui/skip.png');
+  --play-button: url('../textures/gui/play.png');
   /* Images */
   /* Mechas */
   --akashic-img: url('../textures/cards/mecha/default/Akashic.png');
@@ -184,4 +185,6 @@
   /* Classes */
   --class-locked: url('../textures/gui/inventory/lock.png');
   --def-class-icon: url('../textures/gui/inventory/item_ic_1d.png');
+  /* Items */
+  --gold-icon: url("../textures/items/gold.png");
 }

@@ -1,10 +1,11 @@
 function summonPilotTen() {
   let gold = parseInt(localStorage.getItem("goldStorage")) || 0;
   summonType = "p10";
-  if (gold < 1600) {
+  if (gold < 100) {
     return;
   }
-  gold -= 1600;
+  gold -= 100;
+  costGoldShows();
   localStorage.setItem("goldStorage", gold);
   const vidFrame = document.getElementById("vidFrame");
   const gachaVid = document.getElementById("gachaAnimation");

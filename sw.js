@@ -1,6 +1,6 @@
 var GHPATH = '/SMC-LUCKY-HOUSE';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "1.0.4-02102025-beta";
+let VERSIONNAME = "1.0.5-02102025-beta";
 var VERSION = VERSIONNAME;
 
 var URLS = [
@@ -17,20 +17,31 @@ var URLS = [
   `${GHPATH}/Index_data/audio/press_btn.wav`,
 
   `${GHPATH}/Index_data/scripts`,
+  `${GHPATH}/Index_data/scripts/check_obtineds.js`,
+  `${GHPATH}/Index_data/scripts/clickable_name.js`,
   `${GHPATH}/Index_data/scripts/continue.js`,
+  `${GHPATH}/Index_data/scripts/lets.js`,
+  `${GHPATH}/Index_data/scripts/skip_animation.js`,
   `${GHPATH}/Index_data/scripts/tabs.js`,
+  `${GHPATH}/Index_data/scripts/tabs_gallery.js`,
   `${GHPATH}/Index_data/scripts/window_load.js`,
 
   `${GHPATH}/Index_data/scripts/mecha`,
   `${GHPATH}/Index_data/scripts/mecha/openx1.js`,
+  `${GHPATH}/Index_data/scripts/mecha/openx10.js`,
+  `${GHPATH}/Index_data/scripts/mecha/show_info.js`,
+  `${GHPATH}/Index_data/scripts/mecha/list.js`,
 
   `${GHPATH}/Index_data/scripts/pilot`,
   `${GHPATH}/Index_data/scripts/pilot/openx1.js`,
+  `${GHPATH}/Index_data/scripts/pilot/openx10.js`,
+  `${GHPATH}/Index_data/scripts/pilot/show_info.js`,
+  `${GHPATH}/Index_data/scripts/pilot/list.js`,
 
   `${GHPATH}/Index_data/styles`,
-  `${GHPATH}/Index_data/scripts/classes.css`,
-  `${GHPATH}/Index_data/scripts/root.css`,
-  `${GHPATH}/Index_data/scripts/styles.css`,
+  `${GHPATH}/Index_data/styles/classes.css`,
+  `${GHPATH}/Index_data/styles/root.css`,
+  `${GHPATH}/Index_data/styles/styles.css`,
 
   `${GHPATH}/Index_data/textures`,
 

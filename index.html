@@ -77,11 +77,11 @@
           <div class="name caramel"></div>
         </div>
         <hr>
-        <div class="items-title">Death Knel</div>
-        <div class="gallery-card default" onclick="showMechaDeathKnel();">
-          <div class="item-image death-knel locked" id="imgLockDeathKnel"></div>
-          <div class="class ddd locked" id="classesDeathKnel"></div>
-          <div class="name death-knel"></div>
+        <div class="items-title">Death Knell</div>
+        <div class="gallery-card default" onclick="showMechaDeathKnell();">
+          <div class="item-image death-knell locked" id="imgLockDeathKnell"></div>
+          <div class="class ddd locked" id="classesDeathKnell"></div>
+          <div class="name death-knell"></div>
         </div>
         <hr>
         <div class="items-title">Doomlight</div>
@@ -564,13 +564,13 @@
     <div id="mechacontent" class="gacha-continer">
       <div class="gacha-btn-container">
         <button class="opone" id="oponebtnDefMechaOne" onclick="summonMechaOne();">Open x1</button>
-        <button class="opten" id="oponebtnDefMechaTen" onclick="openMechaTen();">Open x10</button>
+        <button class="opten" id="oponebtnDefMechaTen" onclick="summonMechaTen();">Open x10</button>
       </div>
     </div>
     <div id="pilotcontent" class="gacha-continer">
       <div class="gacha-btn-container">
         <button class="opone" id="oponebtnDefPilotOne" onclick="summonPilotOne();">Open x1</button>
-        <button class="opten" id="oponebtnDefPilotTen" onclick="openPilotTen();">Open x10</button>
+        <button class="opten" id="oponebtnDefPilotTen" onclick="summonPilotTen();">Open x10</button>
       </div>
     </div>
     <div class="video-frame" id="vidFrame">
@@ -593,7 +593,7 @@
       <div class="item-name" id="itemName"></div>
       <div class="image-preview" id="itemImage"></div>
       <div class="side-content">
-        <div id="textInfoBelong"></div>
+        <div id="textInfoBelong" onclick="showBlongs();"></div>
       </div>
     </div>
     <footer class="footer">
@@ -605,14 +605,21 @@
       </div>
     </footer>
     <audio id="btnPress" src="Index_data/audio/press_btn.wav"></audio>
+    <script src="Index_data/scripts/lets.js"></script>
     <script src="Index_data/scripts/continue.js"></script>
     <script src="Index_data/scripts/tabs.js"></script>
     <script src="Index_data/scripts/tabs_gallery.js"></script>
+    <script src="Index_data/scripts/mecha/list.js"></script>
+    <script src="Index_data/scripts/pilot/list.js"></script>
     <script src="Index_data/scripts/mecha/openx1.js"></script>
     <script src="Index_data/scripts/pilot/openx1.js"></script>
+    <script src="Index_data/scripts/mecha/openx10.js"></script>
+    <script src="Index_data/scripts/pilot/openx10.js"></script>
     <script src="Index_data/scripts/mecha/show_info.js"></script>
     <script src="Index_data/scripts/pilot/show_info.js"></script>
     <script src="Index_data/scripts/skip_animation.js"></script>
+    <script src="Index_data/scripts/clickable_name.js"></script>
+    <script src="Index_data/scripts/close_prices.js"></script>
     <script src="Index_data/scripts/window_load.js"></script>
     <script>
       if(navigator.serviceWorker) {
